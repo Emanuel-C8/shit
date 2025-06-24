@@ -15,3 +15,5 @@ if ! echo "$PATH" | grep -q "$HOME/.local/bin"; then
 	export PATH=$HOME/.local/bin:$PATH
 fi
 chmod +x ~/.xinitrc
+cp config/unikeyboard config/us /usr/share/X11/xkb/symbols
+cp config/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
