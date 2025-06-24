@@ -36,7 +36,7 @@ fi
 case "$GPU_VENDOR" in
     nvidia)
         echo "[ACTION] Installing NVIDIA drivers..."
-        pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings
+        pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings cuda-tools cudnn nvidia-prime
         ;;
     amd)
         echo "[ACTION] Installing AMD GPU drivers..."
