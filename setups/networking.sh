@@ -1,1 +1,1 @@
-sudo pacman -S NetworkManager --noconfirm
+sudo pacman -S networkmanager --noconfirm
