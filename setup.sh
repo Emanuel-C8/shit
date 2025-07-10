@@ -1,3 +1,4 @@
+sudo pacman -Syy
 source setups/driver.sh
 source setups/networking.sh
 source setups/devtools.sh
