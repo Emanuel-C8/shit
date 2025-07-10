@@ -1,3 +1,6 @@
+    sudo pacman -Syu --noconfirm
+
+    echo "Installing essential packages for DWM and Xorg..."
     sudo pacman -S --noconfirm \
       base-devel git xorg-server xorg-xinit xorg-xauth xorg-xmessage xorg-xrdb xorg-xprop \
       xf86-input-libinput \
@@ -46,8 +49,7 @@ EOF
     echo "Creating ~/.xinitrc to start dwm..."
     echo "exec dwm" > ~/.xinitrc
     chmod +x ~/.xinitrc
-    cp config/unikeyboard config/us /usr/share/X11/xkb/symbols
-    cp config/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
+
     echo ""
     echo "=== Setup complete! ==="
     echo "Make sure to logout and log back in or source ~/.bashrc for PATH changes."
@@ -56,3 +58,6 @@ EOF
     echo "Tips:"
     echo "- Run 'startx' from a real TTY (Ctrl+Alt+F2 to F6), NOT as root or via ssh."
     echo "- Check /var/log/Xorg.0.log or journalctl for errors if X does not start."
+    cp ../config/unikeyboard ../config/us /usr/share/X11/xkb/symbols
+    cp ../config/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
+
