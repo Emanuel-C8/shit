@@ -1,1 +1,1 @@
-sudo pacman -S aerc neomutt --noconfirm
+sudo pacman -Sy aerc neomutt --noconfirm
